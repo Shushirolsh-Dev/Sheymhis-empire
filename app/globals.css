@@ -20,3 +20,16 @@ body{font-size:14px}.serif{font-family:inherit;font-style:normal;font-weight:600
 .nav-book{border-radius:2px}.hero-note{font-style:normal;font-size:13px}
 @media(max-width:850px){.services{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.service-card{min-height:185px;padding:15px}.service-card h3{font-size:15px;margin-top:16px}.showcase-image{height:360px}.nav{margin-top:34px}}
 @media(max-width:420px){.service-card{min-height:190px;padding:13px}.service-card p{font-size:10px}.showcase-image{height:300px}}
+
+/* Branded booking dropdowns */
+.custom-select{position:relative}
+.custom-select-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;border:1px solid #e5dadd;background:#fffdfa;padding:14px 13px;border-radius:2px;color:var(--ink);font-size:14px;cursor:pointer;transition:border-color .18s,box-shadow .18s}
+.custom-select-trigger:hover,.custom-select-trigger.is-open{border-color:var(--wine)}
+.custom-select-trigger:focus-visible,.custom-select-option:focus-visible{outline:2px solid #a96c83;outline-offset:2px}
+.custom-select-trigger svg{width:16px;height:16px;color:var(--wine);flex:none;transition:transform .18s}
+.custom-select-trigger.is-open svg{transform:rotate(180deg)}
+.custom-select-menu{position:absolute;top:calc(100% + 7px);left:0;right:0;z-index:30;padding:5px;background:#fffdfa;border:1px solid #e5dadd;border-radius:3px;box-shadow:0 16px 36px #3013211c;max-height:230px;overflow-y:auto;animation:dropdownIn .14s ease-out}
+.custom-select-option{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;padding:11px 10px;border:0;border-radius:2px;background:transparent;color:var(--ink);font-size:13px;cursor:pointer}
+.custom-select-option:hover,.custom-select-option.selected{background:var(--cream);color:var(--wine)}
+.custom-select-option svg{width:14px;height:14px;color:var(--wine)}
+@keyframes dropdownIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
